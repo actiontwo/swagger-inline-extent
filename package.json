@@ -1,16 +1,16 @@
 {
-  "_from": "swagger-inline",
-  "_id": "swagger-inline@1.0.2",
+  "_from": "swagger-inline-extent",
+  "_id": "swagger-inline-extent@1.0.0",
   "_inBundle": false,
   "_integrity": "sha512-TVXMpoqzU/k7VvRrn8Z3arfBpOE5aIF4Mypv2nwKMvQQLxk0f1bvaewRUXl1OVyt80mGRcyGI8ZeRG2ZDnhxeQ==",
-  "_location": "/swagger-inline",
+  "_location": "/swagger-inline-extent",
   "_phantomChildren": {},
   "_requested": {
     "type": "tag",
     "registry": true,
-    "raw": "swagger-inline",
-    "name": "swagger-inline",
-    "escapedName": "swagger-inline",
+    "raw": "swagger-inline-extent",
+    "name": "swagger-inline-extent",
+    "escapedName": "swagger-inline-extent",
     "rawSpec": "",
     "saveSpec": null,
     "fetchSpec": "latest"
@@ -21,7 +21,7 @@
   ],
   "_resolved": "https://registry.npmjs.org/swagger-inline/-/swagger-inline-1.0.2.tgz",
   "_shasum": "e2a284de752be93104560402e2992fa0d6771b67",
-  "_spec": "swagger-inline",
+  "_spec": "swagger-inline-extent",
   "_where": "/Users/actiontwo/Sites/Project/hms_accommodation_service",
   "author": {
     "name": "Readme.io"
@@ -32,10 +32,10 @@
     ]
   },
   "bin": {
-    "swagger-inline": "build/index.js"
+    "swagger-inline-extent": "build/index.js"
   },
   "bugs": {
-    "url": "https://github.com/readmeio/swagger-inline/issues"
+    "url": "https://github.com/actiontwo/swagger-inline-extent/issues"
   },
   "bundleDependencies": false,
   "dependencies": {
@@ -64,7 +64,7 @@
     "mocha": "^3.0.2",
     "nyc": "^13.1.0"
   },
-  "homepage": "https://github.com/readmeio/swagger-inline#readme",
+  "homepage": "https://github.com/actiontwo/swagger-inline-extent#readme",
   "keywords": [
     "swagger",
     "docs",
@@ -79,7 +79,7 @@
   "name": "swagger-inline-extent",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/readmeio/swagger-inline.git"
+    "url": "git+ssh://git@github.com/actiontwo/swagger-inline-extent.git"
   },
   "scripts": {
     "build": "babel src/ -d build",
@@ -89,5 +89,5 @@
     "test": "nyc --reporter=none mocha --colors --require babel-register tests/**/*-test.js",
     "test-watch": "mocha --watch --colors --require babel-register tests/**/*-test.js"
   },
-  "version": "1.0.2"
+  "version": "1.0.0"
 }
