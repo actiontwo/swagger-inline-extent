@@ -89,6 +89,12 @@ schemes: ['http']
  *       type: "String"
  */
 
+/**
+ * @components [schemas] Entity
+ * type: "type"
+ * properties: "adsfasd"
+ */
+
 api.route('/pets', function() {
     /* Pet code 😺 */
 });
@@ -119,4 +125,10 @@ paths:
           description: A list of pets.
           schema:
             type: String
+components:
+  schemas:    
+    Entity:
+      type: type
+      properties: proerties
+
 ```
