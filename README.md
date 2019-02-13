@@ -1,5 +1,6 @@
-# swagger-inline
+# swagger-inline-extent
 
+# Extent from Source
 Node module for extracting swagger endpoints from inline comments.
 
 [![CircleCI](https://circleci.com/gh/readmeio/swagger-inline.svg?style=svg)](https://circleci.com/gh/readmeio/swagger-inline)
@@ -11,21 +12,9 @@ Node module for extracting swagger endpoints from inline comments.
 ## Install
 
 ```
-npm install --save-dev swagger-inline
+npm install --save-dev swagger-inline-extent
 ```
 
-## Build
-```bash
-npm run build # single build
-npm start # build + watch
-```
-
-## Test
-
-```bash
-npm test # single run
-npm run test-watch # test + watch
-```
 
 ## Usage
 
