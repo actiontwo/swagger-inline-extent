@@ -1,0 +1,93 @@
+{
+  "_from": "swagger-inline",
+  "_id": "swagger-inline@1.0.2",
+  "_inBundle": false,
+  "_integrity": "sha512-TVXMpoqzU/k7VvRrn8Z3arfBpOE5aIF4Mypv2nwKMvQQLxk0f1bvaewRUXl1OVyt80mGRcyGI8ZeRG2ZDnhxeQ==",
+  "_location": "/swagger-inline",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "swagger-inline",
+    "name": "swagger-inline",
+    "escapedName": "swagger-inline",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/swagger-inline/-/swagger-inline-1.0.2.tgz",
+  "_shasum": "e2a284de752be93104560402e2992fa0d6771b67",
+  "_spec": "swagger-inline",
+  "_where": "/Users/actiontwo/Sites/Project/hms_accommodation_service",
+  "author": {
+    "name": "Readme.io"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "bin": {
+    "swagger-inline": "build/index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/readmeio/swagger-inline/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.0",
+    "bluebird": "^3.4.1",
+    "chalk": "^1.1.3",
+    "commander": "^2.9.0",
+    "fs-extra": "^0.30.0",
+    "glob": "^7.0.5",
+    "js-yaml": "^3.6.1",
+    "lodash": "^4.15.0",
+    "multi-glob": "^1.0.1",
+    "multilang-extract-comments": "^0.3.0"
+  },
+  "deprecated": false,
+  "description": "Generate your swagger files from inline swagger comments.",
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-preset-es2015": "^6.14.0",
+    "chai": "^3.5.0",
+    "eslint": "^3.5.0",
+    "eslint-config-airbnb": "^11.1.0",
+    "eslint-plugin-import": "^1.15.0",
+    "eslint-plugin-jsx-a11y": "^2.2.2",
+    "eslint-plugin-react": "^6.3.0",
+    "mocha": "^3.0.2",
+    "nyc": "^13.1.0"
+  },
+  "homepage": "https://github.com/readmeio/swagger-inline#readme",
+  "keywords": [
+    "swagger",
+    "docs",
+    "readmeio",
+    "documentation",
+    "api",
+    "inline",
+    "comments"
+  ],
+  "license": "ISC",
+  "main": "build/index.js",
+  "name": "swagger-inline-extent",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/readmeio/swagger-inline.git"
+  },
+  "scripts": {
+    "build": "babel src/ -d build",
+    "posttest": "nyc report --reporter=lcov && nyc report --reporter=text-summary && nyc check-coverage --statements 75 --branches 70 --functions 85 --lines 75",
+    "prepublish": "npm run-script build",
+    "start": "babel --watch src/ -d build/",
+    "test": "nyc --reporter=none mocha --colors --require babel-register tests/**/*-test.js",
+    "test-watch": "mocha --watch --colors --require babel-register tests/**/*-test.js"
+  },
+  "version": "1.0.2"
+}
