@@ -5,6 +5,7 @@ const _ = require('lodash');
 const chalk = require('chalk');
 
 const Loader = require('./loader');
+const Replace = require('./replace');
 const Extractor = require('./extractor');
 const Options = require('./options');
 
@@ -51,8 +52,9 @@ function swaggerInline(globPatterns, providedOptions) {
     }
 
     const options = new Options(providedOptions);
+    const replace = new Replace(providedOptions.replace || {})
     const log = options.getOut() ? options.getLogger() : () => {};
-
+    
     return Loader.resolvePaths(globPatterns, options).then((files) => {
         const base = options.getBase();
 
@@ -90,7 +92,8 @@ function swaggerInline(globPatterns, providedOptions) {
 
                 log(`${endpoints.length} swagger definitions found...`);
 
-                const swagger = mergeEndpointsWithBase(baseObj, endpoints);
+                let swagger = mergeEndpointsWithBase(baseObj, endpoints);
+                swagger = replace.exec(swagger)
                 log(`swagger${options.getFormat()} created!`);
                 return outputResult(swagger, options);
             });

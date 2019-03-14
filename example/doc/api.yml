@@ -1,0 +1,29 @@
+openapi: 3.0.0
+servers:
+  - description: Development
+    url: 'https://example.io/'
+info:
+  description: This is a simple API
+  version: 1.0.0
+  title: Example
+  contact:
+    email: huucuong1612@gmail.com
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+paths:
+  'api/v1/codes/{type}/1':
+    get:
+      description: Get List code
+      tags:
+        - v1/codes
+      summary: Get List Codes
+
+      x-amazon-apigateway-integration:
+        passthroughBehavior: when_no_match
+        uri: 'https://example.com/api/v1/codes/{type}'
+        httpMethod: GET
+        type: http_proxy
+        requestParameters:
+          integration.request.path.type: method.request.path.type
+
