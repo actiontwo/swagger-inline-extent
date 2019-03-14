@@ -1,6 +1,6 @@
 {
   "_from": "swagger-inline-extent",
-  "_id": "swagger-inline-extent@1.0.1",
+  "_id": "swagger-inline-extent@1.0.2",
   "_inBundle": false,
   "_integrity": "sha512-TVXMpoqzU/k7VvRrn8Z3arfBpOE5aIF4Mypv2nwKMvQQLxk0f1bvaewRUXl1OVyt80mGRcyGI8ZeRG2ZDnhxeQ==",
   "_location": "/swagger-inline-extent",
@@ -89,5 +89,5 @@
     "test": "nyc --reporter=none mocha --colors --require babel-register tests/**/*-test.js",
     "test-watch": "mocha --watch --colors --require babel-register tests/**/*-test.js"
   },
-  "version": "1.0.1"
+  "version": "1.0.2"
 }

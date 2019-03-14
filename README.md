@@ -27,6 +27,9 @@ const swaggerInline = require('swagger-inline');
 
 swaggerInline(['src/**/*.js', 'test/**/*.js'], {
     base: 'swaggerBase.json',
+     replace:{
+        path:'/api/v1',
+    }
 }).then((generatedSwagger) => {
     /* ... */
 });
@@ -69,7 +72,7 @@ schemes: ['http']
 ```js
 
 /*
- * @api [get] /pets
+ * @api [get] #{path}/pets
  * description: "Returns all pets from the system that the user has access to"
  * responses:
  *   "200":
@@ -106,7 +109,7 @@ basePath: /api
 schemes:
   - http
 paths:
-  /pets:
+  /api/v1/pets:
     get:
       description: Returns all pets from the system that the user has access to
       responses:
