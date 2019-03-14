@@ -24,12 +24,12 @@ class Replace {
         return data
     }
     checkRegex(input){
-        let keys = input.match(/#{[\w.]*}/g)
+        let keys = input.match(/\${[\w.]*}/g)
         if(keys===null){
             return input
         }
         _.map(keys, (key) => {
-            let formatKey = key.replace(/#{|}/g, '')
+            let formatKey = key.replace(/\${|}/g, '')
             let dataReplace = this.readInsideObject(formatKey,this.options)
             input = input.replace(key,dataReplace)
         })

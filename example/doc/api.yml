@@ -18,12 +18,13 @@ paths:
       tags:
         - v1/codes
       summary: Get List Codes
-
+      parameters:
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/page'
+        - $ref: '#/components/parameters/codeType'
       x-amazon-apigateway-integration:
         passthroughBehavior: when_no_match
         uri: 'https://example.com/api/v1/codes/{type}'
-        httpMethod: GET
-        type: http_proxy
-        requestParameters:
-          integration.request.path.type: method.request.path.type
-
+      responses:
+        '200':
+          description: Successful response

@@ -72,7 +72,7 @@ schemes: ['http']
 ```js
 
 /*
- * @api [get] #{path}/pets
+ * @api [get] ${path}/pets
  * description: "Returns all pets from the system that the user has access to"
  * responses:
  *   "200":
